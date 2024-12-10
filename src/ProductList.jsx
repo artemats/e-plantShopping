@@ -247,12 +247,12 @@ function ProductList() {
     };
     const handleCartClick = (e) => {
         e.preventDefault();
-        setShowCart(true); // Set showCart to true when cart icon is clicked
+        setShowCart(true);
     };
     const handlePlantsClick = (e) => {
         e.preventDefault();
-        setShowPlants(true); // Set showAboutUs to true when "About Us" link is clicked
-        setShowCart(false); // Hide the cart when navigating to About Us
+        setShowPlants(true);
+        setShowCart(false);
     };
     const handleContinueShopping = (e) => {
         e.preventDefault();
@@ -289,7 +289,6 @@ function ProductList() {
                         <div className="product-card" key={plantIndex}>
                             <img className="product-image" src={plant.image} alt={plant.name} />
                             <div className="product-title">{plant.name}</div>
-                            {/*Similarly like the above plant.name show other details like description and cost*/}
                             <button  className="product-button" onClick={() => handleAddToCart(plant)}>Add to Cart</button>
                         </div>
                       ))}
